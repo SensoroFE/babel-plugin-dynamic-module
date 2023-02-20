@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "build": "redbud build",
-    "test": "jest"
+    "test": "jest",
+    "release": "walrus release"
   },
   "license": "MIT",
   "devDependencies": {
