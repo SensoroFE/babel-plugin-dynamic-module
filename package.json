@@ -2,18 +2,18 @@
   "name": "@sensoro/babel-plugin-dynamic-module",
   "version": "1.0.0",
   "description": "支持动态模块的babel插件",
+  "main": "lib/index.js",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
     "build": "redbud build",
     "test": "jest"
   },
-  "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/traverse": "^7.20.13",
+    "@babel/core": "^7.21.0",
+    "@babel/traverse": "^7.21.0",
     "@types/babel__core": "^7.20.0",
     "@types/babel__traverse": "7.18.3",
     "@types/jest": "^29.4.0",
