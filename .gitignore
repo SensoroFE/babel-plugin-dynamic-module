@@ -1,6 +1,8 @@
 /node_modules
+
 /dist
 lib
+es
 .DS_Store
 *.tsbuildinfo
 .jest-cache

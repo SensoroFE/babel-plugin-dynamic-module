@@ -18,6 +18,7 @@ export function sourceFormatter(
   const attribute = importPath
     .replace(new RegExp(`^${moduleName}/es`), moduleName)
     .replace(new RegExp(`^${moduleName}/lib`), moduleName)
+    .replace(new RegExp(`^${moduleName}/src`), moduleName)
     .replace(/\@/g, '')
     .replace(/\//g, '$')
     .replace(/\-/g, '$');

@@ -3,7 +3,10 @@
   "version": "1.0.1",
   "description": "支持动态模块的babel插件",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "es/index.js",
   "files": [
+    "es",
     "lib"
   ],
   "scripts": {

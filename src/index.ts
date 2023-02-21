@@ -30,7 +30,9 @@ export default function ({ template }: typeof BabelCore) {
 
         // 导出的默认
         let defaultNameSpaceExport;
+        // @ts-ignore
         let exports = [];
+        // @ts-ignore
         node.specifiers.forEach((specifier) => {
           if (specifier.type === 'ImportSpecifier') {
             if (
@@ -72,6 +74,7 @@ export default function ({ template }: typeof BabelCore) {
         }
         if (exports.length > 0) {
           sourceString += `const {`;
+          // @ts-ignore
           exports.forEach((element) => {
             if (typeof element === 'object') {
               // @ts-ignore
