@@ -46,7 +46,7 @@ export default function ({ template }: typeof BabelCore) {
                 local: specifier.local.name,
               });
             } else if (specifier.imported.name !== specifier.local.name) {
-               // @ts-ignore
+              // @ts-ignore
               exports.push({
                 imported: specifier.imported.name,
                 local: specifier.local.name,
@@ -93,3 +93,5 @@ export default function ({ template }: typeof BabelCore) {
     },
   };
 }
+
+export { sourceFormatter } from './utils';

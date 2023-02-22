@@ -1,6 +1,8 @@
 interface SourceFormatterOptions {
-  moduleName: string
+  moduleName: string;
+  mountGlobal?: boolean;
 }
+
 /**
  * 转换 import 的路径为 window 对象属性
  * @param importPath
@@ -12,7 +14,8 @@ interface SourceFormatterOptions {
 export function sourceFormatter(
   importPath: string,
   {
-    moduleName
+    moduleName,
+    mountGlobal = true,
   }: SourceFormatterOptions
 ) {
   const attribute = importPath
@@ -23,5 +26,5 @@ export function sourceFormatter(
     .replace(/\//g, '$')
     .replace(/\-/g, '$');
 
-  return `window.${attribute}`;
+  return mountGlobal ? `window.${attribute}` : attribute;
 }
